@@ -16,17 +16,17 @@ Q 1.2: After predicting how the circuit should behave theoretically, you should 
 
 | Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
-| IL                    |                      |                      |
-| VL                    |                      |                      |
-| PL                    |                      |                      |
+| IL                    |         0.5          |           0.5        |
+| VL                    |          7           |            7         |
+| PL                    |         3.5          |           3.5        |
 
-> Comments (state if results match/differ):
+> Comments (state if results match/differ): the results are the same dude to the simplicity of the circuit and lack of non linear or transient components.
 
 Q 1.3: What would be an appropriate “Maximum Timestep” and “Stop Time” to be used for this simulation?
 
-> Time Step (assuming 1/20th of the period of 500 Hz):
+> Time Step (assuming 1/20th of the period of 500 Hz): 1/500 /20 = 0.1 ms
 
-> Stop Time (assuming we’d like to capture 200 cycles):
+> Stop Time (assuming we’d like to capture 200 cycles): 1/500 * 200 = 0.4 Seconds
 
 Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)), peak instantaneous power (PL(t)), and average power delivered by the source (Pin) for the circuits shown above. Simulate these circuits in LTspice using the models provided (labelled Part 1B-1D) and compare with the theoretical results.
 
