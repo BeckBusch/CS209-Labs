@@ -2,27 +2,27 @@
 
 # Answer Sheet - Lab 1
 
-## Part 1: Revising Basics 
+## Part 1: Revising Basics
 
 Q 1.1: Determine the load current (IL), load voltage (VL), and power delivered to the load (PL).
 
-> IL:
+> IL: 0.5A
 
-> VL:
+> VL: 7V
 
-> PL:
+> PL: 3.5W
 
 Q 1.2: After predicting how the circuit should behave theoretically, you should now simulate the circuit in LTspice and validate your theoretical analysis. Use the LTspice model provided to you (labelled Part 1A).
 
-| Parameter             | Theoretical Value    | Simulated Value      | 
+| Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
 | IL                    |                      |                      |
 | VL                    |                      |                      |
 | PL                    |                      |                      |
 
-> Comments (state if results match/differ): 
+> Comments (state if results match/differ):
 
-Q 1.3: What would be an appropriate “Maximum Timestep” and “Stop Time” to be used for this simulation?	
+Q 1.3: What would be an appropriate “Maximum Timestep” and “Stop Time” to be used for this simulation?
 
 > Time Step (assuming 1/20th of the period of 500 Hz):
 
@@ -32,7 +32,7 @@ Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)),
 
 > Circuit with Resistor
 
-| Parameter             | Theoretical Value    | Simulated Value      | 
+| Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
 | IL(rms)               |                      |                      |
 | VL(rms)               |                      |                      |
@@ -41,7 +41,7 @@ Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)),
 
 > Circuit with Inductor
 
-| Parameter             | Theoretical Value    | Simulated Value      | 
+| Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
 | IL(rms)               |                      |                      |
 | VL(rms)               |                      |                      |
@@ -50,7 +50,7 @@ Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)),
 
 > Circuit with Capacitor
 
-| Parameter             | Theoretical Value    | Simulated Value      | 
+| Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
 | IL(rms)               |                      |                      |
 | VL(rms)               |                      |                      |
@@ -73,7 +73,7 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 
 > Circuit with Inductor
 
-| Parameter             | Simulated Value      | 
+| Parameter             | Simulated Value      |
 | ----------------------|----------------------|
 | IL(rms)               |                      |
 | VL(rms)               |                      |
@@ -82,7 +82,7 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 
 > Circuit with Capacitor
 
-| Parameter             | Simulated Value      | 
+| Parameter             | Simulated Value      |
 | ----------------------|----------------------|
 | IL(rms)               |                      |
 | VL(rms)               |                      |
@@ -105,7 +105,7 @@ Q 2.1: As stated in your design specifications, the AC voltage supplied by the p
 
 Q 2.2: Assume that the viper on the variable resistor is set somewhat closer to the lowest resistance position, and therefore RL is 25 Ohm. We are also assuming that L is 4mH and Vac is 14Vrms in this specific example. Note that these numbers are chosen as an example load setting we may test your circuit at. Using circuit theory, determine the RMS load current as well as the real, reactive, and apparent power consumed by the load. Verify answers using the LTspice model provided (labelled Part 2).
 
-| Parameter             | Theoretical Value    | Simulated Value      | 
+| Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
 | Load current IL(rms)  |                      |                      |
 | Real power (W)        |                      |                      |
@@ -116,7 +116,7 @@ Q 2.2: Assume that the viper on the variable resistor is set somewhat closer to 
 
 Q 2.3: Similarly, calculate and simulate the RMS load current, real, reactive, and apparent power if the viper position is changed to increase RL to 75 Ohm (i.e. closer to the highest resistance position)? Again, these numbers are chosen as an example setting we may test your circuit at (note that L is 4mH and Vac is 14Vrms).
 
-| Parameter             | Theoretical Value    | Simulated Value      | 
+| Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
 | Load current IL(rms)  |                      |                      |
 | Real power (W)        |                      |                      |
@@ -127,7 +127,7 @@ Q 2.3: Similarly, calculate and simulate the RMS load current, real, reactive, a
 
 ## Part 3: Sensing AC Load Current
 
-Q 3.1: Determine the value of the shunt resistor suitable to measure the current flowing through the AC load used in your project. Note that you have already calculated the minimum and maximum currents to be measured in Q2.1. Limit the maximum power dissipation in the shunt resistor to 200mW. 
+Q 3.1: Determine the value of the shunt resistor suitable to measure the current flowing through the AC load used in your project. Note that you have already calculated the minimum and maximum currents to be measured in Q2.1. Limit the maximum power dissipation in the shunt resistor to 200mW.
 
 > Shunt Resistor (Rs):
 
@@ -145,7 +145,7 @@ Q 3.2: Using the simulation model given (labelled Part 3 & 4), verify that you h
 
 Q 3.3: Using table below, compare the advantages and disadvantages of using a bigger vs a smaller shunt resistor than the one in Q3.1? Based on this comparison, what specific value will you use as the shunt resistor in your project? Will you use the value calculated in Q3.1 or a different value? Justify your selection.
 
-| Parameter             | Bigger Rs Value      | Smaller Rs Value     | 
+| Parameter             | Bigger Rs Value      | Smaller Rs Value     |
 | ----------------------|----------------------|----------------------|
 | SNR                   |                      |                      |
 | Dissipation (Pis)     |                      |                      |
@@ -194,6 +194,6 @@ Q O.1: Assume that you have decided to use two 1 Ohm ROYALOHM MF006JJ series met
 
 > Maximum Rs:                   (observed when 					)
 
-> Assumptions: 
+> Assumptions:
 
 > Expected Accuracy:
