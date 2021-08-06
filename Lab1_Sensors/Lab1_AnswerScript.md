@@ -63,11 +63,11 @@ Q 1.5: How can we minimise the granularity of simulation points and improve the 
 
 Q 1.6: Lets add a 0.2 Ohm resistor in series with the inductor and a 790 Ohm resistor in parallel with the capacitor to help the two circuits reach steady-state conditions faster. What is the time-constant of each circuit? Will your simulation reach steady-state well before the “Stop Time” you have defined? (i.e. is the “Stop Time” larger than 5 times the time constant?)
 
-> Time constant of circuit with 4mH inductor:
+> Time constant of circuit with 4mH inductor: TC = L / R = 0.004/0.2 = 0.02
 
-> Time constant of circuit with 25.3uF capacitor:
+> Time constant of circuit with 25.3uF capacitor: TC = R * C = 790 * 25.3 * 10^-6 = 0.019987
 
-> Would simulation reach steady-state:
+> Would simulation reach steady-state: 0.02 * 5 = 0.1 < 0.4 So yes, the simulation would reach steady state.
 
 Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation results you obtained from the modified circuits to show that they somewhat agree with the theoretical predictions. You can further improve the accuracy of your simulations by reducing the “Maximum Timestep” and/or reducing the impact on the circuit due to the resistive element you added. However, this will be at the expense of simulation time.
 
