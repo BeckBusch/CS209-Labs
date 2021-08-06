@@ -95,13 +95,13 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 
 Q 2.1: As stated in your design specifications, the AC voltage supplied by the power supply across the AC load is going to be between 12.6Vrms and 15.4Vrms. The AC load is going to be set to draw 2.5VA-7.5VA regardless of the AC voltage supplied to it. What is the maximum and minimum current you expect to measure? What is the maximum and minimum AC voltage you expect to measure?
 
-> Maximum RMS load voltage:
+> Maximum RMS load voltage: 4.46
 
-> Minimum RMS load voltage:
+> Minimum RMS load voltage: 0.41
 
-> Maximum RMS load current:
+> Maximum RMS load current: 6.16
 
-> Minimum RMS load current:
+> Minimum RMS load current: 1.68
 
 Q 2.2: Assume that the viper on the variable resistor is set somewhat closer to the lowest resistance position, and therefore RL is 25 Ohm. We are also assuming that L is 4mH and Vac is 14Vrms in this specific example. Note that these numbers are chosen as an example load setting we may test your circuit at. Using circuit theory, determine the RMS load current as well as the real, reactive, and apparent power consumed by the load. Verify answers using the LTspice model provided (labelled Part 2).
 
