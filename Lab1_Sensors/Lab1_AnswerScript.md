@@ -59,7 +59,7 @@ Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)),
 
 Q 1.5: How can we minimise the granularity of simulation points and improve the accuracy? What would be a drawback of doing so?
 
-> Add answer here
+> we can improve the accuracy by decreasing the step size. this will record data at closer intervals and give us a smoother curve, but it will increase the simulation time and resource usage. we can mitigate this downside by decreasing the total simulation time as well, so that we end up getting a very accurate simulation of a small area of data we want to investigate.
 
 Q 1.6: Lets add a 0.2 Ohm resistor in series with the inductor and a 790 Ohm resistor in parallel with the capacitor to help the two circuits reach steady-state conditions faster. What is the time-constant of each circuit? Will your simulation reach steady-state well before the “Stop Time” you have defined? (i.e. is the “Stop Time” larger than 5 times the time constant?)
 
