@@ -34,28 +34,28 @@ Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)),
 
 | Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
-| IL(rms)               |    1.12              |                      |
-| VL(rms)               |    14                |                      |
-| Peak PL(t)            |    15.68             |                      |
-| Pin                   |    15.68             |                      |
+| IL(rms)               |    1.12              |      1.12            |
+| VL(rms)               |    14                |      14              |
+| Peak PL(t)            |    15.68             |      15.68           |
+| Pin                   |    15.68             |      15.68           |
 
 > Circuit with Inductor
 
 | Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
-| IL(rms)               |                      |                      |
-| VL(rms)               |                      |                      |
-| Peak PL(t)            |                      |                      |
-| Pin                   |                      |                      |
+| IL(rms)               |                      |      1.2             |
+| VL(rms)               |                      |      14              |
+| Peak PL(t)            |                      |      16.8            |
+| Pin                   |                      |      16.8 ?          |
 
 > Circuit with Capacitor
 
 | Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
-| IL(rms)               |                      |                      |
-| VL(rms)               |                      |                      |
-| Peak PL(t)            |                      |                      |
-| Pin                   |                      |                      |
+| IL(rms)               |                      |       1.17           |
+| VL(rms)               |                      |       15.7           |
+| Peak PL(t)            |                      |       18.4           |
+| Pin                   |                      |       18.4 ?         |
 
 Q 1.5: How can we minimise the granularity of simulation points and improve the accuracy? What would be a drawback of doing so?
 
