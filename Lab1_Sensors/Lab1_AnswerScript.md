@@ -34,10 +34,10 @@ Q 1.4: Calculate the theoretical load current (IL(RMS)), load voltage (VL(RMS)),
 
 | Parameter             | Theoretical Value    | Simulated Value      |
 | ----------------------|----------------------|----------------------|
-| IL(rms)               |                      |                      |
-| VL(rms)               |                      |                      |
-| Peak PL(t)            |                      |                      |
-| Pin                   |                      |                      |
+| IL(rms)               |    1.12              |                      |
+| VL(rms)               |    14                |                      |
+| Peak PL(t)            |    15.68             |                      |
+| Pin                   |    15.68             |                      |
 
 > Circuit with Inductor
 
