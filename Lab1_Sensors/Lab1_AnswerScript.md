@@ -75,8 +75,8 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 
 | Parameter             | Simulated Value      |
 | ----------------------|----------------------|
-| IL(rms)               |                      |
-| VL(rms)               |                      |
+| IL(rms)               |   1.06A              |
+| VL(rms)               |   14V                |
 | Peak PL(t)            |                      |
 | Pin                   |                      |
 
@@ -84,8 +84,8 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 
 | Parameter             | Simulated Value      |
 | ----------------------|----------------------|
-| IL(rms)               |                      |
-| VL(rms)               |                      |
+| IL(rms)               |  1.11A               |
+| VL(rms)               |  13.44V              |
 | Peak PL(t)            |                      |
 | Pin                   |                      |
 
