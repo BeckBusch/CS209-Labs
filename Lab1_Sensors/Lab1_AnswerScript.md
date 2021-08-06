@@ -77,8 +77,8 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 | ----------------------|----------------------|
 | IL(rms)               |   1.06A              |
 | VL(rms)               |   14V                |
-| Peak PL(t)            |                      |
-| Pin                   |                      |
+| Peak PL(t)            |   14.84              |
+| Pin                   |   14.84              |
 
 > Circuit with Capacitor
 
@@ -86,8 +86,8 @@ Q 1.7: Modify the simulation as per Q1.6 and run it. Compare the simulation resu
 | ----------------------|----------------------|
 | IL(rms)               |  1.11A               |
 | VL(rms)               |  13.44V              |
-| Peak PL(t)            |                      |
-| Pin                   |                      |
+| Peak PL(t)            |  14.9                |
+| Pin                   |  14.9                |
 
 > Comments (state observation when experimenting with “Maximum Timestep”): The extra resistor does well to rapidly get the circuit to a steady state. because of this efficency, lots of resources are wasted on simulating the same strady state. so in the future we could add the resistor and also decrease the simulation record time closer to 5 time constants.
 
