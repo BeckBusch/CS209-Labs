@@ -22,9 +22,9 @@ Q 1.2: Why is your theory and simulation showing that the output is distorted/cl
 
 Q 1.3: Based on the LM324 datasheet provided on Canvas, what is the maximum output voltage an LM324 can produce when it is supplied by a single-rail 5V source? In the datasheet this is usually referred to as the “High-level output voltage” or VOH. This would change with operating temperature and the current supplied through the output pin of the OpAmp (i.e. the load supplied by the OpAmp). Assume 25 degrees C and a 2kOhm load. Can the simulation model mimic this behaviour? To check this, increase the amplitude of the signal labelled Vsens (in the simulation model provided this is set by the AC source V3 found in the section labelled Power/Signal sources) to 0.5V. See if the high-level output voltage of the OpAmp circuit clips close to the level indicated in the datasheet.
 
-> From datasheet VOH when OpAmp supplied by 5V:
+> From datasheet VOH when OpAmp supplied by 5V: 3.5V
 
-> VOH observed in simulation:
+> VOH observed in simulation: 3.5V
 
 Q 1.4: Based on the plot provided above, what is the minimum output voltage an LM324 can produce when it is supplied by a single-rail 5V source? Assume that the LM324 has to sink 1mA.
 
