@@ -28,7 +28,7 @@ Q 1.3: Based on the LM324 datasheet provided on Canvas, what is the maximum outp
 
 Q 1.4: Based on the plot provided above, what is the minimum output voltage an LM324 can produce when it is supplied by a single-rail 5V source? Assume that the LM324 has to sink 1mA.
 
-> Minimum VOL from plot:
+> Minimum VOL from plot: 0.7V
 
 Q 1.5: Analyse the OpAmp circuit in the figure above using your theoretical knowledge and sketch the theoretically expected output voltage waveform (Vop(out)). Simulate this circuit on LTspice using the model provided (labelled Part 1B) and verify your theoretically obtained results.
 
