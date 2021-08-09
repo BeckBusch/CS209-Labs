@@ -6,7 +6,7 @@
 
 Q 1.1: Analyse the OpAmp circuit in the figure above using your theoretical knowledge and sketch the theoretically expected output voltage waveform (Vop(out)). Simulate this circuit on LTspice using the model provided (labelled Part 1A) and verify your theoretically obtained results. Note that the LM324.lib has to be in the same folder as the LTspice simulation file, as we call this  LM324 OpAmp model from within LTspice.
 
-> Transfer function of Vop(out) :
+> Transfer function of Vop(out) : Sin(1000 * pi * t)
 
 > Replace **_Lab2_Images/1Q1Theory.png_** with your theoretical sketch
 
