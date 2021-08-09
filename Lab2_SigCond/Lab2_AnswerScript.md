@@ -2,7 +2,7 @@
 
 # Answer Sheet - Lab 2
 
-## Part 1: Differential Amplifiers 
+## Part 1: Differential Amplifiers
 
 Q 1.1: Analyse the OpAmp circuit in the figure above using your theoretical knowledge and sketch the theoretically expected output voltage waveform (Vop(out)). Simulate this circuit on LTspice using the model provided (labelled Part 1A) and verify your theoretically obtained results. Note that the LM324.lib has to be in the same folder as the LTspice simulation file, as we call this  LM324 OpAmp model from within LTspice.
 
@@ -10,7 +10,7 @@ Q 1.1: Analyse the OpAmp circuit in the figure above using your theoretical know
 
 > Replace **_Lab2_Images/1Q1Theory.png_** with your theoretical sketch
 
-<img src="Lab2_Images/1Q1Theory.png" height="200"> 
+<img src="Lab2_Images/1Q1Theory.png" height="200">
 
 > Replace **_Lab2_Images/1Q1Sim.png_** with your simulated waveform
 
@@ -26,7 +26,7 @@ Q 1.3: Based on the LM324 datasheet provided on Canvas, what is the maximum outp
 
 > VOH observed in simulation:
 
-Q 1.4: Based on the plot provided above, what is the minimum output voltage an LM324 can produce when it is supplied by a single-rail 5V source? Assume that the LM324 has to sink 1mA. 
+Q 1.4: Based on the plot provided above, what is the minimum output voltage an LM324 can produce when it is supplied by a single-rail 5V source? Assume that the LM324 has to sink 1mA.
 
 > Minimum VOL from plot:
 
@@ -36,7 +36,7 @@ Q 1.5: Analyse the OpAmp circuit in the figure above using your theoretical know
 
 > Replace **_Lab2_Images/1Q5Theory.png_** with your theoretical sketch
 
-<img src="Lab2_Images/1Q5Theory.png" height="200"> 
+<img src="Lab2_Images/1Q5Theory.png" height="200">
 
 > Replace **_Lab2_Images/1Q5Sim.png_** with your simulated waveform
 
@@ -62,7 +62,7 @@ Q 2.2: Modify the simulation model provided (sections of the model labelled ‘P
 
 > Comments (state if OpAmp output may clip or not):
 
-Q 2.3: What will happen if the corresponding resistor pairs of the differential amplifier are not equal to each other (e.g. R1 in each arm differ slightly from each other)? 
+Q 2.3: What will happen if the corresponding resistor pairs of the differential amplifier are not equal to each other (e.g. R1 in each arm differ slightly from each other)?
 
 > Add answer here
 
@@ -80,7 +80,7 @@ Q 3.1: Determine the resistor values R1a, R1b, and R2 required to produce an out
 
 > R2:
 
-Q 3.2: Modify the simulation model provided (sections of the model labelled ‘Part 3’ and ‘AC Source, Load and Sensors’) to verify that you have calculated the correct resistor values in Q3.1. As you did in Lab 1, you can validate the design by changing supply voltage (within the specified range) and observing the sensed voltage (Vvs) as well as the output voltage (Vvo). 
+Q 3.2: Modify the simulation model provided (sections of the model labelled ‘Part 3’ and ‘AC Source, Load and Sensors’) to verify that you have calculated the correct resistor values in Q3.1. As you did in Lab 1, you can validate the design by changing supply voltage (within the specified range) and observing the sensed voltage (Vvs) as well as the output voltage (Vvo).
 
 > Summarise key findings (theoretical vs simulated) in the table below. Here we are analysing the circuit under 3 possible scenarios including the two extreme cases (i.e. minimum and maximum AC voltage). We are assuming that L is exactly 4mH and RL is changed to simulate varying load conditions. You should extract the values you have calculated in Lab 1 (Q4.2) to complete part of this table.
 
@@ -92,7 +92,7 @@ Q 3.2: Modify the simulation model provided (sections of the model labelled ‘P
 
 > Comments (state if OpAmp output may clip or not):
 
-Q 3.3: State why Vvs has an offset (i.e. it is not a pure AC waveform) once you connect the voltage divider with the differential amplifier? 
+Q 3.3: State why Vvs has an offset (i.e. it is not a pure AC waveform) once you connect the voltage divider with the differential amplifier?
 
 > Add answer here
 
@@ -121,11 +121,11 @@ Q 4.1: Derive the transfer function (Vfilter/VOpAmp) of the RC filter shown abov
 
 > Cf and Rf:
 
-Q 4.2: Sketch the theoretically expected output voltage waveform (Vfilter) of the RC filter if the input is a 2Vpk-pk AC signal that has an offset of 2.1V. Modify the simulation model provided by editing Cf and Rf values as per Q4.1 (section of the model labelled ‘Part 4’) and verify your theoretically obtained results. 
+Q 4.2: Sketch the theoretically expected output voltage waveform (Vfilter) of the RC filter if the input is a 2Vpk-pk AC signal that has an offset of 2.1V. Modify the simulation model provided by editing Cf and Rf values as per Q4.1 (section of the model labelled ‘Part 4’) and verify your theoretically obtained results.
 
 > Replace **_Lab2_Images/4Q2Theory.png_** with your theoretical sketch
 
-<img src="Lab2_Images/4Q2Theory.png" height="200"> 
+<img src="Lab2_Images/4Q2Theory.png" height="200">
 
 > Replace **_Lab2_Images/4Q2Sim.png_** with your simulated waveform
 
@@ -135,7 +135,7 @@ Q 4.3: Sketch the theoretically expected bode magnitude and phase plots of the f
 
 > Replace **_Lab2_Images/4Q3Theory.png_** with your theoretical sketch
 
-<img src="Lab2_Images/4Q3Theory.png" height="350"> 
+<img src="Lab2_Images/4Q3Theory.png" height="350">
 
 > Replace **_Lab2_Images/4Q2Sim.png_** with your simulated waveform
 
