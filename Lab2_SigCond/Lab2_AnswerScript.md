@@ -32,7 +32,7 @@ Q 1.4: Based on the plot provided above, what is the minimum output voltage an L
 
 Q 1.5: Analyse the OpAmp circuit in the figure above using your theoretical knowledge and sketch the theoretically expected output voltage waveform (Vop(out)). Simulate this circuit on LTspice using the model provided (labelled Part 1B) and verify your theoretically obtained results.
 
-> Transfer function of Vop(out) :
+> Transfer function of Vop(out) : 2.1 + sin(1000 * pi * t)
 
 > Replace **_Lab2_Images/1Q5Theory.png_** with your theoretical sketch
 
