@@ -56,9 +56,9 @@ Q 2.2: Modify the simulation model provided (sections of the model labelled ‘P
 
 | Source VA  | Vac(rms) | RL       | IL       | Vis,pk Theo | Vis,pk Sim  | Vio,pk Theo | Vio,pk Sim  |
 | -----------|----------|----------|----------|-------------|-------------|-------------|-------------|
-| 7.5VA      | 12.6V    |          |          |             |             |             |             |
-| 7.5VA      | 15.4V    |          |          |             |             |             |             |
-| 2.5VA      | 15.4V    |          |          |             |             |             |             |
+| 7.5VA      | 12.6V    | 16.53    | 0.595    | 0.421       | 0.421       | 3.10        | 3.10        |
+| 7.5VA      | 15.4V    | 28.52    | 0.490    | 0.344       | 0.344       | 2.92        | 2.92        |
+| 2.5VA      | 15.4V    | 93.53    | 0.163    | 0.115       | 0.115       | 2.37        | 2.37        |
 
 > Comments (state if OpAmp output may clip or not):
 
