@@ -64,11 +64,11 @@ Q 2.2: Modify the simulation model provided (sections of the model labelled ‘P
 
 Q 2.3: What will happen if the corresponding resistor pairs of the differential amplifier are not equal to each other (e.g. R1 in each arm differ slightly from each other)?
 
-> Add answer here
+> If the values for R1 are different in each branch then the 2.1 voltage shift will not be preserved, since the branches need to have the same values to preserve the shift. The other effect is that the amplification factor will change since the ratios between the resistors will change.
 
 Q 2.4: What could you do to improve the accuracy of current measurement under light loads? Under light load IL reach the minimum current load current you determined during Lab 1. Since the differential amplifier gain is fixed, Vio can be quite small.
 
-> Add answer here
+> By adding an amplifier with a gain of 1.6 or less to the end of our circuit (Vio) we can amplify our signal while ensuring that the max output of 3.1 will not be increased past the 5 volt limit of our adc. (3.1 * 1.6 = 4.96)
 
 ## Part 3: Conditioning Voltage Measurement
 
