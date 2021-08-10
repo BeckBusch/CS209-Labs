@@ -46,9 +46,9 @@ Q 1.5: Analyse the OpAmp circuit in the figure above using your theoretical know
 
 Q 2.1: Determine the resistor values R1 and R2 required to produce an output voltage signal (Vio) that has an offset of 2.1V and a peak-peak voltage of 2V when the AC load current is a maximum. Make sure to select resistors from the E12 series. The value of the shunt resistor (Rs) should be what you determined in Q3.4 of Lab 1. Note that you have already calculated and validated the minimum and maximum values of IL as well as Vis in Lab 1. So, refer to lab 1 to extract this information.
 
-> R1:
+> R1: 3.9
 
-> R2:
+> R2: 8.2
 
 Q 2.2: Modify the simulation model provided (sections of the model labelled ‘Part 2’ and ‘AC Source, Load and Sensors’) to verify that you have calculated the correct resistor values in Q2.1. As you did in Lab 1, you can validate the design by changing load resistance/supply voltage to vary the VA drawn by the AC load, while keeping it within 7.5VA to 2.5VA and observing the sensed voltage (Vis) as well as the output voltage (Vio).
 
