@@ -94,13 +94,13 @@ Q 3.2: Modify the simulation model provided (sections of the model labelled ‘P
 
 Q 3.3: State why Vvs has an offset (i.e. it is not a pure AC waveform) once you connect the voltage divider with the differential amplifier?
 
-> Add answer here
+> Because the first branch of the amplifier has 2.1V source which is higher than Vvs at all times, the voltage of Vvs is increased.
 
 Q 3.4: When selecting the resistors for your differential amplifier circuits, would you pick them to be in the Ohms, Kilo-Ohms, or Mega-Ohms range? State issues relating to using resistor values that are too small (Ohms) or too large (Mega-Ohms).
 
-> Reasons not to use very small resistor values (e.g. Ohms):
+> Reasons not to use very small resistor values (e.g. Ohms): Smaller resistors will allow more current to flow and increase the power dissipation. 
 
-> Reasons not to use very large feedback resistor values (e.g. Mega-Ohms):
+> Reasons not to use very large feedback resistor values (e.g. Mega-Ohms): Using larger resistors would waste money on expensive resistors and introduce more noise.
 
 Q 3.5: Assume that LM324 OpAmps become unavailable (products get discontinued very often in real life) and you had to order a different OpAmp. What device parameters would you need to consider? Is there a minimum and/or maximum rating for each of these parameters that need to be observed? Complete the following table – we have given you an example.
 
