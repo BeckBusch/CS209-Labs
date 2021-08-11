@@ -74,11 +74,11 @@ Q 2.4: What could you do to improve the accuracy of current measurement under li
 
 Q 3.1: Determine the resistor values R1a, R1b, and R2 required to produce an output voltage signal that has an offset of 2.1V and a peak-peak voltage of about 2Vpk-pk when the AC source voltage is a maximum. Make sure to select resistor values from the E12 series. The values of the voltage divider resistors (Ra and Rb) are what you determined in Q4.3 of Lab 1. Note that you have already calculated and validated the minimum and maximum values of Vvs in Lab 1. So, refer to Lab 1 to extract this information.
 
-> R1a:
+> R1a: 1k
 
-> R1b:
+> R1b: 1.39k
 
-> R2:
+> R2: 1.39k
 
 Q 3.2: Modify the simulation model provided (sections of the model labelled ‘Part 3’ and ‘AC Source, Load and Sensors’) to verify that you have calculated the correct resistor values in Q3.1. As you did in Lab 1, you can validate the design by changing supply voltage (within the specified range) and observing the sensed voltage (Vvs) as well as the output voltage (Vvo).
 
