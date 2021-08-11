@@ -60,7 +60,7 @@ Q 2.2: Modify the simulation model provided (sections of the model labelled ‘P
 | 7.5VA      | 15.4V    | 28.52    | 0.490    | 0.344       | 0.344       | 2.92        | 2.92        |
 | 2.5VA      | 15.4V    | 93.53    | 0.163    | 0.115       | 0.115       | 2.37        | 2.37        |
 
-> Comments (state if OpAmp output may clip or not):
+> Comments (state if OpAmp output may clip or not): output will not clip since the shift is large enough to increase teh minimum value past 0V but not shift the maximum value higher than 3.5 volts
 
 Q 2.3: What will happen if the corresponding resistor pairs of the differential amplifier are not equal to each other (e.g. R1 in each arm differ slightly from each other)?
 
@@ -90,7 +90,7 @@ Q 3.2: Modify the simulation model provided (sections of the model labelled ‘P
 | 7.5VA      | 15.4V    |   28.52  |  0.490   |  3.10       |  3.09       |
 | 2.5VA      | 15.4V    |   93.53  |  0.163   |  3.10       |  3.09       |
 
-> Comments (state if OpAmp output may clip or not):
+> Comments (state if OpAmp output may clip or not): output will not clip since the shift is large enough to increase teh minimum value past 0V but not shift the maximum value higher than 3.5 volts
 
 Q 3.3: State why Vvs has an offset (i.e. it is not a pure AC waveform) once you connect the voltage divider with the differential amplifier?
 
