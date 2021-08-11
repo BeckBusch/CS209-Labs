@@ -107,7 +107,7 @@ Q 3.5: Assume that LM324 OpAmps become unavailable (products get discontinued ve
 | Parameter                     | Max and/or Min Specification    |
 | ------------------------------|---------------------------------|
 | Single rail supply voltage    | Min rating < 5V < Max rating    |
-| Operating Temp                |                                 |
+| Operating Temp                | 0 to 70 deg C                   |
 | Slew Rate                     | 0.5                             |
 | Noise Voltage                 | < 35v @ 1kH                     |
 | Input offset voltage          | 7V                              |
