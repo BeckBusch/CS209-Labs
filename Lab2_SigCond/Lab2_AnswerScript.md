@@ -98,7 +98,7 @@ Q 3.3: State why Vvs has an offset (i.e. it is not a pure AC waveform) once you 
 
 Q 3.4: When selecting the resistors for your differential amplifier circuits, would you pick them to be in the Ohms, Kilo-Ohms, or Mega-Ohms range? State issues relating to using resistor values that are too small (Ohms) or too large (Mega-Ohms).
 
-> Reasons not to use very small resistor values (e.g. Ohms): Smaller resistors will allow more current to flow and increase the power dissipation. 
+> Reasons not to use very small resistor values (e.g. Ohms): Smaller resistors will allow more current to flow and increase the power dissipation.
 
 > Reasons not to use very large feedback resistor values (e.g. Mega-Ohms): Using larger resistors would waste money on expensive resistors and introduce more noise.
 
@@ -107,11 +107,11 @@ Q 3.5: Assume that LM324 OpAmps become unavailable (products get discontinued ve
 | Parameter                     | Max and/or Min Specification    |
 | ------------------------------|---------------------------------|
 | Single rail supply voltage    | Min rating < 5V < Max rating    |
-|                               |                                 |
-|                               |                                 |
-|                               |                                 |
-|                               |                                 |
-|                               |                                 |
+| Operating Temp                |                                 |
+| Slew Rate                     | 0.5                             |
+| Noise Voltage                 | < 35v @ 1kH                     |
+| Input offset voltage          | 7V                              |
+| Total supply voltage          | 3 - 32 Volts                    |
 
 ## Part 4: Filters
 
