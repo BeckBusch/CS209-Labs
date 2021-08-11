@@ -155,7 +155,7 @@ Q 5.1: The smoothing capacitor Cs in the regulator circuit above is selected in 
 
 > Theoretical dVin:
 
-> Simulated dVin:
+> Simulated dVin: 8.255
 
 Q 5.2: On LTspice, observe Vac and Ireg waveforms, and sketch them here. State why the current waveform looks like short-duration bursts.
 
@@ -163,7 +163,7 @@ Q 5.2: On LTspice, observe Vac and Ireg waveforms, and sketch them here. State w
 
 <img src="Lab2_Images/5Q2Sim.png" height="200">
 
-> Ireg looks like short-duration bursts because:
+> Ireg looks like short-duration bursts because: Whenever the ac source oscilliates the diode restricts the current from flowing.
 
 Q 5.4: What are the benefits and disadvantages of using a half-wave rectifier opposed to a full-wave rectifier in your design?
 
