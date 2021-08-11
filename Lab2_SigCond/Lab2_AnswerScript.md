@@ -143,9 +143,9 @@ Q 4.3: Sketch the theoretically expected bode magnitude and phase plots of the f
 
 Q 4.4: What will be the impact of shifting the filter cut-off frequency closer to 500Hz or 100kHz? Validate your answer using LTspice.
 
-> A cut-off frequency closer to 500Hz results in:
+> A cut-off frequency closer to 500Hz results in: Shifting the area of large phase shift to the left. i.e. the large phase shift will occur with lower frequencies.
 
-> A cut-off frequency closer to 100kHz results in:
+> A cut-off frequency closer to 100kHz results in: Large phase shifts occurring over a much higher range of frequencies.
 
 ## Part 5: DC Regulator Circuit
 
