@@ -117,9 +117,9 @@ Q 3.5: Assume that LM324 OpAmps become unavailable (products get discontinued ve
 
 Q 4.1: Derive the transfer function (Vfilter/VOpAmp) of the RC filter shown above to show that it functions as a 1st order low-pass filter. Determine the values of Cf and Rf required to ensure a -3dB cut-off frequency of 10kHz. Note that, the AC sources is expected to generate a significantly strong noise components at frequencies 100kHz and beyond. As such, it is a good decision to place the filter cut-off frequency at 10kHz, which is significantly lower than noise frequency but still considerably higher than the 500Hz signal frequency.
 
-> Transfer function Vfilter/VOpAmp:
+> Transfer function Vfilter/VOpAmp: 1 / (1 + S * Rc)
 
-> Cf and Rf:
+> Cf and Rf: 10nF and 10k ohms
 
 Q 4.2: Sketch the theoretically expected output voltage waveform (Vfilter) of the RC filter if the input is a 2Vpk-pk AC signal that has an offset of 2.1V. Modify the simulation model provided by editing Cf and Rf values as per Q4.1 (section of the model labelled ‘Part 4’) and verify your theoretically obtained results.
 
