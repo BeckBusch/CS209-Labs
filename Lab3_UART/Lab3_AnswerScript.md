@@ -6,23 +6,23 @@
 
 Q P.1: What was the largest number stored in the array, in decimal and in hex?
 
-> Add answer here 
+> Add answer here
 
 Q P.2: Why did the memory window show a lot of 00 elements between some of the numbers in the array?
 
-> Add answer here 
+> Add answer here
 
-## Part 1: What is UART? 
+## Part 1: What is UART?
 
 Q 1.1: What is the purpose of each of the following parameters and bits?
 
-> The start bit:
+> The start bit: the transmission drops from the usual high value to a low value for one clock cycle to tell the device to start reading data.
 
-> The parity bit:
+> The parity bit: the parity bit counts the number of 1 values in the frame and is 0 if there are an even amount and 1 if there are an odd amount.
 
-> The number of stop bits:
+> The number of stop bits: two stop bits can be used to sacrifice speed for extra processing time when the baud rate is high.
 
-> The baud rate:
+> The baud rate: the baud rate is the transfer speed measured in bits per second.
 
 ## Part 2: How do we control the microcontroller?
 
@@ -32,23 +32,23 @@ Q 2.1: Using the datasheet, state the register and bits that control each of the
 | --------------------------|------------------------|----------------------------|----------|-------------------|
 | Receive Complete          | UCSR0A RXC0(Bit 7)     | USART Rx complete flag     | No       | Runtime           |
 | Data (Tx) Register Empty  | UCSR0A UDRE0(Bit 5)    | USART ready to Tx flag     | Yes      | Runtime           |
-| Tx Complete               |                        |                            |          |                   |
-| Mode Selection            |                        |                            |          |                   |
-| Character Size            |                        |                            |          |                   |
-| Clock Polarity            |                        |                            |          |                   |
-| Baud Rate                 |                        |                            |          |                   |
-| Receiver Enable           |                        |                            |          |                   |
-| Transmitter Enable        |                        |                            |          |                   |
-| Parity Mode               |                        |                            |          |                   |
-| Parity Error              |                        |                            |          |                   |
+| Tx Complete               | USCR0A TXC0(Bit 6)     | Transmit Shift Reg empty   |          | Runtime           |
+| Mode Selection            | UCSR0C UMSEL0(Bit 6&7) | USART Operation Mode       |          |                   |
+| Character Size            | UCSR0B UCSZ02(Bit 2) & USCR0C UCSZ00&01 (Bit 1&2)                                                 | Number of bits per frame   |          |                   |
+| Clock Polarity            | UCSR0C UCPOL0(Bit 0)   | Sync Edge Polarity         |          |                   |
+| Baud Rate                 | UBRR0H(Bit 0-3) & UBRR0L | Set the Baud rate. 4 most sig digits in H and other 8 digits in L                                                                                 | Yes      |                   |
+| Receiver Enable           | UCSR0B  RXEN0(Bit 4)   | Enable the USART receiver  |          |                   |
+| Transmitter Enable        | UCSR0B  TXENn(Bit 3)   | Enable the USART transmitter |          |                   |
+| Parity Mode               | UCSR0C UPMn(Bit 4&5)   | Enable Parity and set odd or even |          |                   |
+| Parity Error              | UCSR0A UPE0(Bit 2)     | Set if parity error detected |          | Runtime         |
 
-Q 2.2: Using the datasheet, what is the appropriate UBRR value, assuming that our system clock is 2MHz?	
+Q 2.2: Using the datasheet, what is the appropriate UBRR value, assuming that our system clock is 2MHz?
 
-> Add answer here 
+> 12 or 25 if sync
 
 Q 2.3: On the ATMega328P, the UBRR is divided up between two registers, UBRR0H and UBRR0L. Why do you think this is the case?
 
-> Add answer here 
+> Add answer here
 
 Q 2.4: Using your answers from Q 2.1 and the datasheet, for each of the three control registers below, fill out the table with the short name for each bit, and the value we need to set it to during initialisation. Your options are 0 or 1 – if you don’t care what the value is, set it to 0.
 
@@ -75,50 +75,50 @@ Q 2.5: For each of these instructions, finish the C macro expression:
 > Test if the UDRE0 bit is 1:
 
 ```c
-if( ___ & (1 << ___ )) { 
+if( ___ & (1 << ___ )) {
    //Code...
-} 
+}
 ```
 
-> Write a 1 (set) to the TXEN0 bit: 
+> Write a 1 (set) to the TXEN0 bit:
 
 ```c
 ___ |= ( __ << ___ );
 ```
 
-> Write a 0 (clear) to the UCPOL0 bit: 
+> Write a 0 (clear) to the UCPOL0 bit:
 
 ```c
 ___________
 ```
 
-## Part 3: What data are we sending? 
+## Part 3: What data are we sending?
 
 Q 3.1: On the ATMega328P, how many bits of data can be stored in a variable of each of these types:
 
 > char: 		
 
-> uint8_t: 
+> uint8_t:
 
 > int:		
 
-> uint16_t: 
+> uint16_t:
 
-> int8_t: 
+> int8_t:
 
-> float: 
+> float:
 
 Q 3.2: What is the size of the UDR0 register?
 
-> Add answer here 
+> Add answer here
 
 Q 3.3: What is the largest number we can transmit?
 
-> Add answer here 
+> Add answer here
 
 Q 3.4: What numbers would correspond to the word “HELLO”?
 
-> Add answer here 
+> Add answer here
 
 Q 3.5: Fill in the blanks below to describe how to send a number to a terminal:
 
@@ -129,19 +129,19 @@ Q 3.5: Fill in the blanks below to describe how to send a number to a terminal:
 
 Q 4.1: Assuming that we can begin transmitting a UART packet immediately after the previous one ends, work out the length of time required to send each of these:
 
-> A single character: 
+> A single character:
 
-> A 3-digit number: 
+> A 3-digit number:
 
 Q 4.2: Now, also assuming that we need to send a comma character and a space character between each number, work out the length of time to send each of these:
 
-> Three 3-digit numbers: 
+> Three 3-digit numbers:
 
 > The entire primes list from pre-lab (assume all 3-digits):
 
-Q 4.3: Write a **_usart_init(uint16_t ubrr)_** function which sets up the USART peripheral as determined in Part 2. Of the five control registers, how many could be left with their initial values? 
+Q 4.3: Write a **_usart_init(uint16_t ubrr)_** function which sets up the USART peripheral as determined in Part 2. Of the five control registers, how many could be left with their initial values?
 
-> Add answer here 
+> Add answer here
 
 Q 4.4: Write a **_usart_transmit(uint8_t data)_** function which handles transmission of a single number through the USART peripheral. The important steps are to:
 
@@ -158,9 +158,9 @@ Q 4.7: Modify your program so that it follows these steps:
 > Step 3: Inside the while(1) loop, set up a ___________________
 >
 > a.	Extract the individual characters of your prime numbers
-> 
+>
 > b.	Call usart_transmit(character) as needed
-> 
+>
 > c.	Call usart_transmit(character) for the comma and space as needed
 >
 > d.	Increment ____________
@@ -173,8 +173,8 @@ Q 4.8: Complete the flowchart below that describes the flow of your program code
 
 ## Optional Task: Advanced String Processing
 
-Q O.2) Compile both the sprintf and the original version of your code. Now, compare the size of the generated “.hex” (a better measure of the code size than the “elf”. 
+Q O.2) Compile both the sprintf and the original version of your code. Now, compare the size of the generated “.hex” (a better measure of the code size than the “elf”.
 
-> Which is larger? 
- 
+> Which is larger?
+
 > By how many times is it larger?
