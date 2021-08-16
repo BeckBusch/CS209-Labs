@@ -33,18 +33,18 @@ Q 2.1: Using the datasheet, state the register and bits that control each of the
 | Receive Complete          | UCSR0A RXC0(Bit 7)     | USART Rx complete flag     | No       | Runtime           |
 | Data (Tx) Register Empty  | UCSR0A UDRE0(Bit 5)    | USART ready to Tx flag     | Yes      | Runtime           |
 | Tx Complete               | USCR0A TXC0(Bit 6)     | Transmit Shift Reg empty   |          | Runtime           |
-| Mode Selection            | UCSR0C UMSEL0(Bit 6&7) | USART Operation Mode       |          |                   |
-| Character Size            | UCSR0B UCSZ02(Bit 2) & USCR0C UCSZ00&01 (Bit 1&2)                                                 | Number of bits per frame   |          |                   |
-| Clock Polarity            | UCSR0C UCPOL0(Bit 0)   | Sync Edge Polarity         |          |                   |
-| Baud Rate                 | UBRR0H(Bit 0-3) & UBRR0L | Set the Baud rate. 4 most sig digits in H and other 8 digits in L                                                                                 | Yes      |                   |
-| Receiver Enable           | UCSR0B  RXEN0(Bit 4)   | Enable the USART receiver  |          |                   |
-| Transmitter Enable        | UCSR0B  TXENn(Bit 3)   | Enable the USART transmitter |          |                   |
-| Parity Mode               | UCSR0C UPMn(Bit 4&5)   | Enable Parity and set odd or even |          |                   |
-| Parity Error              | UCSR0A UPE0(Bit 2)     | Set if parity error detected |          | Runtime         |
+| Mode Selection            | UCSR0C UMSEL0(Bit 6&7) | USART Operation Mode       | No       | Innit           |
+| Character Size            | UCSR0B UCSZ02(Bit 2) & USCR0C UCSZ00&01 (Bit 1&2) | Number of bits per frame   | Yes     | Innit            |
+| Clock Polarity            | UCSR0C UCPOL0(Bit 0)   | Sync Edge Polarity         | No       |  Innit        |
+| Baud Rate                 | UBRR0H(Bit 0-3) & UBRR0L | Set the Baud rate. 4 most sig digits in H and other 8 digits in L | Yes      |  Innit           |
+| Receiver Enable           | UCSR0B  RXEN0(Bit 4)   | Enable the USART receiver  | Yes      | Runtime           |
+| Transmitter Enable        | UCSR0B  TXENn(Bit 3)   | Enable the USART transmitter | Yes      |  Runtime            |
+| Parity Mode               | UCSR0C UPMn(Bit 4&5)   | Enable Parity and set odd or even | No     |  Innit         |
+| Parity Error              | UCSR0A UPE0(Bit 2)     | Set if parity error detected | No     | Runtime         |
 
 Q 2.2: Using the datasheet, what is the appropriate UBRR value, assuming that our system clock is 2MHz?
 
-> 12 or 25 if sync
+> 12
 
 Q 2.3: On the ATMega328P, the UBRR is divided up between two registers, UBRR0H and UBRR0L. Why do you think this is the case?
 
