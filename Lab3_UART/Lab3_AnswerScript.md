@@ -75,7 +75,7 @@ Q 2.5: For each of these instructions, finish the C macro expression:
 > Test if the UDRE0 bit is 1:
 
 ```c
-if( ___ & (1 << ___ )) {
+if( UCSR0A & (1 << 5 )) {
    //Code...
 }
 ```
@@ -83,13 +83,14 @@ if( ___ & (1 << ___ )) {
 > Write a 1 (set) to the TXEN0 bit:
 
 ```c
-___ |= ( __ << ___ );
+UCSR0B |= ( 1 << 3 );
 ```
 
 > Write a 0 (clear) to the UCPOL0 bit:
 
 ```c
-___________
+// zero shift is unnecessary but helps with readability
+UCSR0C &= !(1 << 0);
 ```
 
 ## Part 3: What data are we sending?
