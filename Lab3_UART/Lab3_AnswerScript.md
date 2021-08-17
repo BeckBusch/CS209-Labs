@@ -62,7 +62,7 @@ Q 2.4: Using your answers from Q 2.1 and the datasheet, for each of the three co
 
 | RXCIE0 | TXCIE0 | UDRIE0 | RXEN0  | TXEN0  | UCSZ02 | RXB80  | TXB80  |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|        |        |        |        |        | 0      | 0      | 0      |
+| 0      | 0      | 0      | 0      | 0      | 0      | 0      | 0      |
 
 > UCSR0C
 
