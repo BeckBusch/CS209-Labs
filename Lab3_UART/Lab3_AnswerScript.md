@@ -6,11 +6,11 @@
 
 Q P.1: What was the largest number stored in the array, in decimal and in hex?
 
-> Add answer here
+> 293, 01 25
 
 Q P.2: Why did the memory window show a lot of 00 elements between some of the numbers in the array?
 
-> Add answer here
+> each element in the array is stored as a 16 bit integer, which requires 4 hex digits to store. since most of the numbers only use two hex digits, the other two will be insignificant.
 
 ## Part 1: What is UART?
 
