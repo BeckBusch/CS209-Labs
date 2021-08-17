@@ -48,27 +48,27 @@ Q 2.2: Using the datasheet, what is the appropriate UBRR value, assuming that ou
 
 Q 2.3: On the ATMega328P, the UBRR is divided up between two registers, UBRR0H and UBRR0L. Why do you think this is the case?
 
-> Add answer here
+> Since they have to store a 12 bit number they have to divide it between two registers.
 
 Q 2.4: Using your answers from Q 2.1 and the datasheet, for each of the three control registers below, fill out the table with the short name for each bit, and the value we need to set it to during initialisation. Your options are 0 or 1 – if you don’t care what the value is, set it to 0.
 
 > UCSR0A
 
-| RXC0   |        |        |        |        |        |        |        |
+| RXC0   | TXC0   | UDRE0  |  FE0   | DOR0   | UPE0   | U2X0   | MPCM0  |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| 0      |        |        |        |        |        |        |        |
+| 0      | 0      | 0      | 0      | 0      | 0      | 0      | 0      |
 
 > UCSR0B
 
-|        |        |        |        |        |        |        |        |
+| RXCIE0 | TXCIE0 | UDRIE0 | RXEN0  | TXEN0  | UCSZ02 | RXB80  | TXB80  |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|        |        |        |        |        |        |        |        |
+|        |        |        |        |        | 0      | 0      | 0      |
 
 > UCSR0C
 
-|        |        |        |        |        |        |        |        |
+| UMSEL01| UMSEL00| UMP01  | UMP00  | USBS0  | UCSZ01 | UCSZ00 | UCPOL0 |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|        |        |        |        |        |        |        |        |
+| 0      | 0      | 0      | 0      | 0      | 1      | 1      | 0      |
 
 Q 2.5: For each of these instructions, finish the C macro expression:
 
