@@ -111,19 +111,19 @@ Q 3.1: On the ATMega328P, how many bits of data can be stored in a variable of e
 
 Q 3.2: What is the size of the UDR0 register?
 
-> Add answer here
+> 8 bits
 
 Q 3.3: What is the largest number we can transmit?
 
-> Add answer here
+> 255
 
 Q 3.4: What numbers would correspond to the word “HELLO”?
 
-> Add answer here
+> 72 69 76 76 79
 
 Q 3.5: Fill in the blanks below to describe how to send a number to a terminal:
 
-> We can extract the individual digits of a number by using the ______________ operator. Then we encode an individual digit into its ASCII equivalent by simply adding the number _________. Then we iterate through each digit of the number using a ____________, writing each character to the _______ register.
+> We can extract the individual digits of a number by using the _modulo_ operator. Then we encode an individual digit into its ASCII equivalent by simply adding the number _________. Then we iterate through each digit of the number using a ____________, writing each character to the _______ register.
 
 
 ## Part 4: It’s time to transmit data!  
