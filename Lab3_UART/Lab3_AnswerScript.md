@@ -32,12 +32,12 @@ Q 2.1: Using the datasheet, state the register and bits that control each of the
 | --------------------------|------------------------|----------------------------|----------|-------------------|
 | Receive Complete          | UCSR0A RXC0(Bit 7)     | USART Rx complete flag     | No       | Runtime           |
 | Data (Tx) Register Empty  | UCSR0A UDRE0(Bit 5)    | USART ready to Tx flag     | Yes      | Runtime           |
-| Tx Complete               | USCR0A TXC0(Bit 6)     | Transmit Shift Reg empty   |          | Runtime           |
+| Tx Complete               | USCR0A TXC0(Bit 6)     | Transmit Shift Reg empty   | No       | Runtime           |
 | Mode Selection            | UCSR0C UMSEL0(Bit 6&7) | USART Operation Mode       | No       | Innit           |
 | Character Size            | UCSR0B UCSZ02(Bit 2) & USCR0C UCSZ00&01 (Bit 1&2) | Number of bits per frame   | Yes     | Innit            |
 | Clock Polarity            | UCSR0C UCPOL0(Bit 0)   | Sync Edge Polarity         | No       |  Innit        |
 | Baud Rate                 | UBRR0H(Bit 0-3) & UBRR0L | Set the Baud rate. 4 most sig digits in H and other 8 digits in L | Yes      |  Innit           |
-| Receiver Enable           | UCSR0B  RXEN0(Bit 4)   | Enable the USART receiver  | Yes      | Runtime           |
+| Receiver Enable           | UCSR0B  RXEN0(Bit 4)   | Enable the USART receiver  | No       | Runtime           |
 | Transmitter Enable        | UCSR0B  TXENn(Bit 3)   | Enable the USART transmitter | Yes      |  Runtime            |
 | Parity Mode               | UCSR0C UPMn(Bit 4&5)   | Enable Parity and set odd or even | No     |  Innit         |
 | Parity Error              | UCSR0A UPE0(Bit 2)     | Set if parity error detected | No     | Runtime         |
@@ -62,7 +62,7 @@ Q 2.4: Using your answers from Q 2.1 and the datasheet, for each of the three co
 
 | RXCIE0 | TXCIE0 | UDRIE0 | RXEN0  | TXEN0  | UCSZ02 | RXB80  | TXB80  |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| 0      | 0      | 0      | 0      | 0      | 0      | 0      | 0      |
+| 0      | 1      | 0      | 0      | 1      | 0      | 0      | 0      |
 
 > UCSR0C
 
@@ -75,7 +75,7 @@ Q 2.5: For each of these instructions, finish the C macro expression:
 > Test if the UDRE0 bit is 1:
 
 ```c
-if( UCSR0A & (1 << 5 )) {
+if( UCSR0A & (1 << UDRE0 )) {
    //Code...
 }
 ```
@@ -83,31 +83,30 @@ if( UCSR0A & (1 << 5 )) {
 > Write a 1 (set) to the TXEN0 bit:
 
 ```c
-UCSR0B |= ( 1 << 3 );
+UCSR0B |= ( 1 << TXEN0 );
 ```
 
 > Write a 0 (clear) to the UCPOL0 bit:
 
 ```c
-// zero shift is unnecessary but helps with readability
-UCSR0C &= !(1 << 0);
+UCSR0C &= ~(1 << UCPOL0);
 ```
 
 ## Part 3: What data are we sending?
 
 Q 3.1: On the ATMega328P, how many bits of data can be stored in a variable of each of these types:
 
-> char: 		
+> char: 8 bits
 
-> uint8_t:
+> uint8_t: 8 bits
 
-> int:		
+> int: 32 bits
 
-> uint16_t:
+> uint16_t: 16 bits
 
-> int8_t:
+> int8_t: 8 bits
 
-> float:
+> float: 32 bits
 
 Q 3.2: What is the size of the UDR0 register?
 
@@ -123,7 +122,7 @@ Q 3.4: What numbers would correspond to the word “HELLO”?
 
 Q 3.5: Fill in the blanks below to describe how to send a number to a terminal:
 
-> We can extract the individual digits of a number by using the _modulo_ operator. Then we encode an individual digit into its ASCII equivalent by simply adding the number _________. Then we iterate through each digit of the number using a ____________, writing each character to the _______ register.
+> We can extract the individual digits of a number by using the __modulo__ operator. Then we encode an individual digit into its ASCII equivalent by simply adding the number __48__. Then we iterate through each digit of the number using a __loop__, writing each character to the __data__ register.
 
 
 ## Part 4: It’s time to transmit data!  
