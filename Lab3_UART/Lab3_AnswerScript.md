@@ -141,13 +141,13 @@ Q 4.2: Now, also assuming that we need to send a comma character and a space cha
 
 Q 4.3: Write a **_usart_init(uint16_t ubrr)_** function which sets up the USART peripheral as determined in Part 2. Of the five control registers, how many could be left with their initial values?
 
-> Add answer here
+> since we only need to set USCR0B and one of the baud rate registers, three out of the 5 can be left as defualt.
 
 Q 4.4: Write a **_usart_transmit(uint8_t data)_** function which handles transmission of a single number through the USART peripheral. The important steps are to:
 
-> Step 1: Check bit _____ of register ___________ and wait if _____________
+> Step 1: Check bit __5__ of register __USCR0A__ and wait if __it's set to 1__
 
-> Step 2: Load _______________ into the ___________________ register
+> Step 2: Load __the data__ into the __transmit data buffer__ register
 
 Q 4.7: Modify your program so that it follows these steps:
 
