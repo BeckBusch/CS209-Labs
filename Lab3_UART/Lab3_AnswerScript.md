@@ -155,7 +155,7 @@ Q 4.7: Modify your program so that it follows these steps:
 
 > Step 2: Put the list of primes from the pre-lab into memory (in an array)
 
-> Step 3: Inside the while(1) loop, set up a ___________________
+> Step 3: Inside the while(1) loop, set up a __for loop__
 >
 > a.	Extract the individual characters of your prime numbers
 >
@@ -163,7 +163,7 @@ Q 4.7: Modify your program so that it follows these steps:
 >
 > c.	Call usart_transmit(character) for the comma and space as needed
 >
-> d.	Increment ____________
+> d.	Increment __the array index__
 
 Q 4.8: Complete the flowchart below that describes the flow of your program code:
 
