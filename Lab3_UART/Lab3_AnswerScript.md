@@ -129,15 +129,15 @@ Q 3.5: Fill in the blanks below to describe how to send a number to a terminal:
 
 Q 4.1: Assuming that we can begin transmitting a UART packet immediately after the previous one ends, work out the length of time required to send each of these:
 
-> A single character:
+> A single character: 8 bits of data plus a stop and a start bit make a 10 bit frame. sent at a baud rate of 9600 means the time is 10 / 9600 = 1.04 ms
 
-> A 3-digit number:
+> A 3-digit number: a 3 digit number will require three frames, taking 1.04 * 3 = 3.12ms
 
 Q 4.2: Now, also assuming that we need to send a comma character and a space character between each number, work out the length of time to send each of these:
 
-> Three 3-digit numbers:
+> Three 3-digit numbers: three three digit numbers would require 9 frames and then an additional 4 frames to send two commas and two spaces, making 13 frames. 13 * 1.04 = 13.5ms
 
-> The entire primes list from pre-lab (assume all 3-digits):
+> The entire primes list from pre-lab (assume all 3-digits): 62 three digit numbers plus 61 comma seperators make (62 * 3) + (61 * 2) = 308 frames. 308 * 1.04 = 320.8ms
 
 Q 4.3: Write a **_usart_init(uint16_t ubrr)_** function which sets up the USART peripheral as determined in Part 2. Of the five control registers, how many could be left with their initial values?
 
