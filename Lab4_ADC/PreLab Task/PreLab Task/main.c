@@ -11,16 +11,18 @@
 
 int main(void)
 {
-	DDRB = 0xFF;
+	DDRB = (1<<PB5);
 	DDRC = 0;
 	DDRD = 0;
     /* Replace with your application code */
     while (1) 
     {
-		PORTB = (1<<PB5); // turn on
-		_delay_ms(1000); // wait half a second
-		PORTB &= (0<<PB5); // turn off
-		_delay_ms(1000); // wait half a second
+		if (PINB & (1<<PB7)) { // If button pressed
+			PORTB &= (0<<PB5); // Turn off
+		} else {
+			PORTB = (1<<PB5); // turn on
+		}
+		
     }
 }
 
