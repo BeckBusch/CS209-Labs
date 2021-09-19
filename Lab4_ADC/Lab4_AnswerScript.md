@@ -20,17 +20,17 @@ Q P.3: How much of a delay is there between the ATmega328P producing a logic hig
 
 Q 1.1: Based on the lecture slides, datasheet, COMPSYS201 coursebook, and other online resources, write a description for each of these terms in your own words:
 
-> Channel Selection:
+> Channel Selection: Selecting which pin from the ADC port will be used as the input
 
-> Sample and Hold:
+> Sample and Hold: Sample and Hold allows the adc to sample the changing analog value from the input at one point in time, and then hold that value long enough to convert it to a digital value. Without this the adc would have to deal with a constantly changing input as it tries to convert it to a digital format.
 
-> Successive Approximation:
+> Successive Approximation: A successive Approximation circuit calculates the adc output by preforming a binary search to match the analog input. A SAR guesses the value and then adjusts this guess depending of whether it is higher or lower than the analog input. It continues to adjust the "guess" until it reaches an appropriate approximation
 
-> Reference Voltage:
+> Reference Voltage: ADC circuits need a reference voltage to provide context to the analog reading. since the adc can only output values within a certain range, it needs to know what analog inputs correspond to the top of this range and what inputs correspond to the bottom of this range.
 
-> Sampling Rate:
+> Sampling Rate: the sampling rate is the number of outputs that the adc can preform each second. this is dependent on the sample and hold capacitor and the delay in the adc circuitry.
 
-> Resolution:
+> Resolution: Since an ADC is trying to represent a continuous range of analog values with a discrete range of binary numbers, the adc must condense all the possible analog values into (typically) 256 digital values. this means that each adc digital output can only be accurate within a limited resolution, the range of analog voltages that get condensed into a single digital number
 
 Q 1.2: How many input channels are connected to the ADC on the ATMega328P?
 
