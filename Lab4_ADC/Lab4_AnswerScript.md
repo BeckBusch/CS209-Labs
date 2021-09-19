@@ -14,7 +14,7 @@ Q P.2: Which pin is the LED connected to?
 
 Q P.3: How much of a delay is there between the ATmega328P producing a logic high (5V) output to drive the LED from the time the push-button is pressed generating a logic low (0V) input (Hint: Change the time scale)? Why is this?
 
-> Add answer here
+> 9 Microseconds
 
 ## Part 1: What is an ADC?
 
