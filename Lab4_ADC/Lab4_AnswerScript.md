@@ -34,35 +34,35 @@ Q 1.1: Based on the lecture slides, datasheet, COMPSYS201 coursebook, and other 
 
 Q 1.2: How many input channels are connected to the ADC on the ATMega328P?
 
-> Add answer here
+> 8 adc channels and one temperature sensor
 
 Q 1.3: How many channels can this ADC process simultaneously?
 
-> Add answer here
+> only one channel can be measured at once, but after the conversion is complete we can switch the adc input channel to any other channel.
 
 Q 1.4: How many clock cycles does a standard ADC conversion take? How long is this in real-world time if we have a 125kHz ADC clock?
 
-> Add answer here
+> a standard conversion takes 13 ADC clock cycles. (1/125000) * 13 * 1000 = 0.104 ms
 
 Q 1.5: Which stage of the sampling process requires the most time? Why?
 
-> Add answer here
+> the most time consuming part of the sampling process is the conversion logic, due to the multiple steps required by the successive approximation.
 
 Q 1.6: Write a formula that gives the ADC count you expect to obtain when converting an analogue signal that has an amplitude of Vanalog. Assume Vref of your ATmega328P/PB is set to 5V and Vanalog<5V.
 
-> Add answer here
+> ADC Output = (Vanalog * 1024) / Vref
 
 Q 1.7: Based on the project specifications and the characteristics of the ATMega328P ADC, what is the voltage resolution (i.e. how many volts does one ADC count correspond to)?
 
-> Add answer here
+> 2.1 / 2^10 * 1000 = 2.0508 MilliVolts
 
 Q 1.8: What is the recommended operating frequency range for the ADC if we want to read 10-bit numbers?
 
-> Add answer here
+> 50kHz to 200kHz
 
 Q 1.9: In this lab you will supply a 125kHz to the ADC on the ATmega328P/PB. What is the prescaler value needed to achieve this ADC frequency?
 
-> Add answer here
+> 2,000,000 / x = 125000    prescaler = 16
 
 ## Part 2: Controlling the ADC
 
