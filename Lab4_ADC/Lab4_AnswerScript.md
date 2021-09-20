@@ -54,7 +54,7 @@ Q 1.6: Write a formula that gives the ADC count you expect to obtain when conver
 
 Q 1.7: Based on the project specifications and the characteristics of the ATMega328P ADC, what is the voltage resolution (i.e. how many volts does one ADC count correspond to)?
 
-> 2.1 / 2^10 * 1000 = 2.0508 MilliVolts
+> 5 / 2^10 * 1000 = 4.8828 MilliVolts
 
 Q 1.8: What is the recommended operating frequency range for the ADC if we want to read 10-bit numbers?
 
@@ -68,7 +68,7 @@ Q 1.9: In this lab you will supply a 125kHz to the ADC on the ATmega328P/PB. Wha
 
 Q 2.1: What are our options for setting the reference voltage on this ADC, and which one is most fit-for-purpose for your project?
 
-> We can either use the internal voltage reference of 1.1v, AVcc of 5V, or a custom refrence voltage through AREF. the best choice for this project is connecting out 2.1v source to
+> We can either use the internal voltage reference of 1.1v, AVcc of 5V, or a custom refrence voltage through AREF. the best choice for this project is using the 5V AVcc since the max voltage of the signal we are reading is about 3 volts.
 
 Q 2.2: For each of the control registers below, fill out the table with the short name for each bit, and the value we need to set it to during initialisation. Your options are 0 or 1 – if you don’t care what the value is, set it to 0.
 
@@ -76,7 +76,7 @@ Q 2.2: For each of the control registers below, fill out the table with the shor
 
 | REFS1  |        |        |        |        |        |        |        |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|   0    | 0 or 1 |   0    |   0    |   ?    |   ?    |    ?   |    ?   |
+|   0    |   1    |   0    |   0    |   ?    |   ?    |    ?   |    ?   |
 
 > ADCSRA
 
@@ -88,7 +88,7 @@ Q 2.2: For each of the control registers below, fill out the table with the shor
 
 |        |        |        |        |        |        |        |        |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|   0    |   0    |   0    |   0    |   0    |   ?    |   ?    |   ?    |
+|   0    |   0    |   0    |   0    |   0    |   0    |   0    |   0    |
 
 Q 2.3: Create a new Atmel Studio project and using your answers thus far, write a function called adc_init(), which initializes the ADC component. Provide the completed skeleton code below.
 
@@ -107,20 +107,21 @@ void adc_init() {
 Q 3.1: Write C code to change ADMUX to read from ADC1, without affecting the other bits in ADMUX that do not control channel selection:
 
 ```c
-//Add your code here
+ADMUX &= ~((1<<MUX3) | (1<<MUX2) | (1<<MUX1));
+ADMUX |= (1<<MUX0);
 ```
 
 Q 3.2: Which bit do we set to start an ADC conversion?
 
-> Add answer here
+> ADSC
 
 Q 3.3: Which bit do we check to know if the conversion is complete?
 
-> Add answer here
+> ADSC
 
 Q 3.4: When we read the ADC result, we use ADCL and ADCH. Why are there two data registers for storing the ADC result?
 
-> Add answer here
+> Because the output from the ADC is a 10 bit number it needs more than one 8 bit register to store it.
 
 ## Part 4: Processing the Data
 
