@@ -68,7 +68,7 @@ Q 1.9: In this lab you will supply a 125kHz to the ADC on the ATmega328P/PB. Wha
 
 Q 2.1: What are our options for setting the reference voltage on this ADC, and which one is most fit-for-purpose for your project?
 
-> Add answer here
+> We can either use the internal voltage reference of 1.1v, AVcc of 5V, or a custom refrence voltage through AREF. the best choice for this project is connecting out 2.1v source to
 
 Q 2.2: For each of the control registers below, fill out the table with the short name for each bit, and the value we need to set it to during initialisation. Your options are 0 or 1 – if you don’t care what the value is, set it to 0.
 
@@ -76,19 +76,19 @@ Q 2.2: For each of the control registers below, fill out the table with the shor
 
 | REFS1  |        |        |        |        |        |        |        |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|        |        |        |        |        |        |        |        |
+|   0    | 0 or 1 |   0    |   0    |   ?    |   ?    |    ?   |    ?   |
 
 > ADCSRA
 
 |        |        |        |        |        |        |        |        |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|        |        |        |        |        |        |        |        |
+|   0    |   0    |   0    |   0    |   0    |   1    |   0    |    0   |
 
 > ADCSRB
 
 |        |        |        |        |        |        |        |        |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|        |        |        |        |        |        |        |        |
+|   0    |   0    |   0    |   0    |   0    |   ?    |   ?    |   ?    |
 
 Q 2.3: Create a new Atmel Studio project and using your answers thus far, write a function called adc_init(), which initializes the ADC component. Provide the completed skeleton code below.
 
