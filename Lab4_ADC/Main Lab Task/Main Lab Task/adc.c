@@ -25,7 +25,7 @@ uint16_t adc_read(uint8_t channel){
 }
 
 float adc_convert_mv(uint16_t value){
-	double result = (value * 5) / 1024;
+	float result = ((float)value * 5) / 1024;
 	return result;
 }
 
