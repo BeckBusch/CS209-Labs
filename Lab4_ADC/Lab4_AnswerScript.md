@@ -127,15 +127,21 @@ Q 3.4: When we read the ADC result, we use ADCL and ADCH. Why are there two data
 
 Q 4.1: Using your answers thus far, add a function called **_adc_convert(value)_** to your program, which takes a raw ADC count and converts it back to the original voltage value. Write out the pseudocode steps (like the ones shown in Q 3.5) here:
 
-> Add answer here
+```c
+double adc_convert_mv(uint16_t value){
+	double result = (value * 5) / 1024;
+	return result;
+}
+```
 
 Q 4.2: What do you observe in the simulation when
 
 > RV1 is set to 100%, what does the ADC read?
->
+> 1023
 > RV1 is set to 50%, what does the ADC read?
->
+> 512
 > RV1 is set to 0%, what does the ADC read?
+> 0
 
 Q 4.5: Run your compiled code using the Lab4_Proteus.pdsprj which has two 500Hz sine wave inputs on ADC0 and ADC1 (remember to change the device back to an ATmega328P ). The signal on ADC0 has an amplitude of 2V and an offset of 2.5V. The signal on ADC1, which is delayed with respect to the signal on ADC0 by a 300 phase-lag, has an amplitude of 1V and an offset of 2.5V. Observe the printed voltages on Proteus’s virtual terminal. Plot these waveforms on Excel to verify the functionality of your code.
 

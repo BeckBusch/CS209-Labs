@@ -120,13 +120,16 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="functions.c">
+    <Compile Include="adc.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="headers.h">
+    <Compile Include="adc.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usart.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
