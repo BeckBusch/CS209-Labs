@@ -25,25 +25,21 @@ int main(void)
 	usart_init(12);
 	adc_init();
 	
+	char formatText[8];
+	sprintf(formatText, "%s", "mV");
+	
     while (1) {
 		uint16_t adcReturn = adc_read(2);
-		float adcRead = adc_convert_mv(adcReturn);
+		uint16_t adcReadmv = adc_convert_mv(adcReturn);
 		
-		float f1,f2;
-		int i1,i2;
-		char string_buffer[10];
-		
-		f1=floor(adcRead);
-		f2=adcRead - f1;
-		i1 = (int)f1;
-		i2 = (int)10000*f2;
-		sprintf(string_buffer,"%d,%d", i1,i2);
-		
-		//char string_buffer[32];
-		//sprintf(string_buffer, "%f", test);
-		
+		char string_buffer[8];
+		sprintf(string_buffer, "%d", adcReadmv);
+
 		for (int i=0; i < strlen(string_buffer); i++){
 			usart_transmit(string_buffer[i]);	
+		}
+		for (int i=0; i < strlen(formatText); i++){
+			usart_transmit(formatText[i]);
 		}
 		
 		usart_transmit(NEWLINE);

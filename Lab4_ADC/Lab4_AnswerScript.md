@@ -76,7 +76,7 @@ Q 2.2: For each of the control registers below, fill out the table with the shor
 
 | REFS1  |        |        |        |        |        |        |        |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|   0    |   1    |   0    |   0    |   ?    |   ?    |    ?   |    ?   |
+|   0    |   1    |   0    |   0    |   0    |   0    |    0   |    0   |
 
 > ADCSRA
 

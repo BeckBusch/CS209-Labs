@@ -13,7 +13,7 @@ void adc_init() {
 
 uint16_t adc_read(uint8_t channel){
 	// Set the channel to read from while not changing the other values in ADMUX
-	ADMUX |= (channel & 0x0F);
+	ADMUX = (ADMUX & 0xF0) | (channel & 0x0F);
 	
 	// Set ADSC to 1 to start the conversion
 	ADCSRA |= (1<<ADSC);
@@ -24,8 +24,8 @@ uint16_t adc_read(uint8_t channel){
 	return ADC;
 }
 
-float adc_convert_mv(uint16_t value){
-	float result = ((float)value * 5) / 1024;
+uint16_t adc_convert_mv(uint16_t value){
+	uint16_t result = ((uint32_t)value * 5000) / 1024;
 	return result;
 }
 
