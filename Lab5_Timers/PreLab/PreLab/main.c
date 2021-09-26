@@ -20,7 +20,7 @@ int main(void) {
 
     while (1) {
 		PORTB |= (1<<PB5); // Turn on
-		_delay_ms(375); // Literally don't understand why I need to double it but...
+		_delay_ms(375);
 		PORTB &= ~(1<<PB5); // Turn off
 		_delay_ms(125);
     }
