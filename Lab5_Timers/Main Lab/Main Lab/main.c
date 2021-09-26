@@ -16,15 +16,16 @@
 
 int main(void){
 	// Set LED pin to output
-	DDRB &= ~(1<<PB5);
+	DDRB &= ~(1 << PB5);
 
 	timer0_init();
+	sei(); //This special function call enables the use of interrupts
 	
 	while(1){
 		
-		if(timer0_check_clear_compare()) {
+		/*if(timer0_check_clear_compare()) {
 			led_toggle();
-		}
+		}*/
 		
 	}
 }
