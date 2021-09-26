@@ -5,15 +5,24 @@
 #include <avr/interrupt.h>
 #include <stdint.h>
 
-ISR(TIMER0_COMPA_vect) { //This ISR function is called when timer0 reaches
-	//compare value, compare flag is automatically cleared
-	led_toggle();
+uint8_t counter = 0;
+
+ISR(TIMER0_COMPA_vect) {	//This ISR function is called when timer0 reaches
+							//compare value, compare flag is automatically cleared
+	if (counter >= 10){
+		counter = 0;
+		led_toggle();
+	}
+	else {
+		counter++;
+	}
+	
 }
 
 void timer0_init(){
 	TCCR0A |= (1 << WGM01);
 	TCCR0B |= (1 << CS02);
-	OCR0A = 79;
+	OCR0A = 71;
 	
 	TIMSK0 |= (1 << OCIE0A);
 }
