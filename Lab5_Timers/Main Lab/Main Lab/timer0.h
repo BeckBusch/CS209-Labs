@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 //Initialize timer0 as per Part 1
-void timer0_init();//uint8_t prescale
+void timer0_init(uint8_t prescale);
 
 //Using polling check if timer0 has reached comparison value
 //if so, it will clear the compare flag and return 1

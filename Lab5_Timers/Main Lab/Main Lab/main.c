@@ -27,11 +27,11 @@ int main(void){
 	EICRA |= (1 << ISC00);
 	EIMSK |= (1 << INT0);
 
-	timer0_init();
+	timer0_init(4);
 	usart_init(12);
 	sei(); //This special function call enables the use of interrupts
 	
 	while(1){
-				
+		clockTransmit();	
 	}
 }

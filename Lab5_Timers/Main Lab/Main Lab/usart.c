@@ -10,7 +10,13 @@
 #define NEWLINE 0xA
 #define RETURN 0xD
 
-void clockTransmit(uint32_t clockCount){
+uint16_t clockCount;
+
+void clockConvert(uint8_t timerOut) {
+	clockCount = 2000000 / ((uint16_t)timerOut * 256);
+}
+
+void clockTransmit(){
 	char string_buffer[8];
 	
 	sprintf(string_buffer, "%d", clockCount);

@@ -7,6 +7,8 @@
 //Toggles the LED
 void usart_init(uint16_t ubrr);
 void usart_transmit(uint8_t data);
-void clockTransmit(uint32_t clockCount);
+
+void clockConvert(uint8_t timerOut);
+void clockTransmit();
 
 #endif
