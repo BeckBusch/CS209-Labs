@@ -16,7 +16,7 @@ Q 1.2: Based on the lecture slides, datasheet, COMPSYS201 notes, and other onlin
 
 Q 1.3: What is the purpose of the prescaler used with the clock source?
 
-> Add answer here
+> to slow down the counting speed so that the timer does not increase at the same rate as the system clock, making it more versatile and useful.
 
 Q 1.4: If the clock rate of the ATmega328P is 2MHz, and the clock selection bits in TCCR0B are set to “100”,
 
@@ -124,6 +124,8 @@ void led_toggle() {
 
 Q 3.1: Change the embedded program you developed previously to toggle the LED using an Output Compare A match interrupt. To do this, firstly, enable the timer0 interrupt in your timer0_init(), add the ISR function to your timer0.c, and in here toggle the LED. Finally, enable global interrupts. Provide the completed skeleton code below:
 
+> Note: OCR0A is a problem. my original value of 79 was calculated by hand and has always produced an offset. With a count of 10 this offset is amplified so OCR0A was adjusted.
+
 > timer0.c
 
 ```c
@@ -156,7 +158,7 @@ sei();        // Special function call that enables the use of interrupts
 
 Q 3.4: What is the maximum range of Timer1? Assume the system clock frequency is 2MHz
 
-> Add answer here
+> (1/2000000) * (2^16 -1) * 1024 = 33.55 Seconds
 
 ## Part 4: Measuring Time
 

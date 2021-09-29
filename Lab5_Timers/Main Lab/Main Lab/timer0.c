@@ -1,12 +1,26 @@
 #include "timer0.h"
 #include "led.h"
+#include "usart.h"
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdint.h>
+#include <stdio.h>
+#include <stdbool.h>
 
-uint8_t counter = 0;
+uint32_t clockCount;
 
+ISR(INT0_vect) {
+	if (PIND & (1 << PIND2)) {
+		TCNT0 = 0;
+	}
+	else {
+		clockCount = 2000000 / ((uint32_t)TCNT0 * 256);
+		clockTransmit(clockCount);
+	}
+}
+
+/*
 ISR(TIMER0_COMPA_vect) {	//This ISR function is called when timer0 reaches
 							//compare value, compare flag is automatically cleared
 	if (counter >= 10){
@@ -18,13 +32,16 @@ ISR(TIMER0_COMPA_vect) {	//This ISR function is called when timer0 reaches
 	}
 	
 }
+*/
 
-void timer0_init(){
-	TCCR0A |= (1 << WGM01);
+void timer0_init(){ //uint8_t prescale
+	//TCCR0A |= (1 << WGM01);
 	TCCR0B |= (1 << CS02);
-	OCR0A = 71;
+	//TCCR0B = (TCCR0B & 0x1F8) | (prescale & 0x7);
+
+	//OCR0A = 78;
 	
-	TIMSK0 |= (1 << OCIE0A);
+	//TIMSK0 |= (1 << OCIE0A);
 }
 
 /*uint8_t timer0_check_clear_compare(){
