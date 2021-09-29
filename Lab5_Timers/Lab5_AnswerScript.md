@@ -164,11 +164,11 @@ Q 3.4: What is the maximum range of Timer1? Assume the system clock frequency is
 
 Q 4.1: Modify your code so that the timer is started on the rising edge of INT0, and stopped on the falling edge of INT0. You can poll the input at INT0, or you can use interrupts. Calculate the frequency of the waveform and send the result over the UART to be displayed on a terminal window. Compile the Atmel Studio project and simulate your program in Proteus. What frequency is the waveform on INT0?
 
-> Add answer here
+> 500Hz
 
 Q 4.2: What is the lowest frequency waveform the timer could measure? Why?
 
-> Add answer here
+> 1 / (2^8 / 1024) = 4Hz
 
 Q 4.3: Change the processor to an ATmega328PB, recompile your code and load on to the Xplained Mini. Make sure the Xplained Mini is plugged on to the Emulator Board. On PuTTY or other terminal program observe the messages printed. What frequency is the waveform on INT0?
 
