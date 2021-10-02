@@ -8,29 +8,29 @@ Q P.1) Given the above component, and assuming “dp” is the MSB and “a” i
 
 > Segments to be turned on for "0" in binary / hex: 0b00111111 / 0x3F
 
-> Segments to be turned on for "1" in binary / hex: 
+> Segments to be turned on for "1" in binary / hex: 0b00000110
 
-> Segments to be turned on for "2" in binary / hex: 
+> Segments to be turned on for "2" in binary / hex: 0b01011011
 
-> Segments to be turned on for "3" in binary / hex: 
+> Segments to be turned on for "3" in binary / hex: 0b01001111
 
-> Segments to be turned on for "4" in binary / hex: 
+> Segments to be turned on for "4" in binary / hex: 0b01100110
 
-> Segments to be turned on for "5" in binary / hex: 
+> Segments to be turned on for "5" in binary / hex: 0b01101101
 
-> Segments to be turned on for "6" in binary / hex: 
+> Segments to be turned on for "6" in binary / hex: 0b01111101
 
-> Segments to be turned on for "7" in binary / hex: 
+> Segments to be turned on for "7" in binary / hex: 0b00000111
 
-> Segments to be turned on for "8" in binary / hex: 
+> Segments to be turned on for "8" in binary / hex: 0b01111111
 
-> Segments to be turned on for "9" in binary / hex: 
+> Segments to be turned on for "9" in binary / hex: 0b01100111
 
 ## Part 1: Multiplexing LEDs
 
 Q 1.2: In the pseudo-code steps given, why do you think that we output the segments before we enable the display (i.e. why is Step 5 before Step 4)?
 
-> Add answer here 
+> Add answer here
 
 Q 1.3: In the pseudo-code steps given, why do you think that we alternate the digit we update every 10ms?
 
