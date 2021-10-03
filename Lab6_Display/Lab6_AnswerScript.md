@@ -30,11 +30,11 @@ Q P.1) Given the above component, and assuming “dp” is the MSB and “a” i
 
 Q 1.2: In the pseudo-code steps given, why do you think that we output the segments before we enable the display (i.e. why is Step 5 before Step 4)?
 
-> Add answer here
+> to avoid displaying an incorrect value, which is a bigger problem now that we are using multiplexing
 
 Q 1.3: In the pseudo-code steps given, why do you think that we alternate the digit we update every 10ms?
 
-> Add answer here
+> we alternate the digits at a rate of every 10ms since that is the fastest we can go while still allowing time for the code that manages the ports.
 
 ## Part 2: Shift registers
 
