@@ -40,4 +40,4 @@ Q 1.3: In the pseudo-code steps given, why do you think that we alternate the di
 
 Q 2.1: If only using multiplexing, how many I/O pins are needed to drive a display that has N number of 7-segment digits where each digit also has a decimal point?
 
-> Add answer here
+> 8 + N since there are 8 segment pins and N common ground pins
