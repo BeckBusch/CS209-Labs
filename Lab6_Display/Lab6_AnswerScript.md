@@ -8,23 +8,23 @@ Q P.1) Given the above component, and assuming “dp” is the MSB and “a” i
 
 > Segments to be turned on for "0" in binary / hex: 0b00111111 / 0x3F
 
-> Segments to be turned on for "1" in binary / hex: 0b00000110
+> Segments to be turned on for "1" in binary / hex: 0b00000110 / 0x6
 
-> Segments to be turned on for "2" in binary / hex: 0b01011011
+> Segments to be turned on for "2" in binary / hex: 0b01011011 / 0x5B
 
-> Segments to be turned on for "3" in binary / hex: 0b01001111
+> Segments to be turned on for "3" in binary / hex: 0b01001111 / 0x4F
 
-> Segments to be turned on for "4" in binary / hex: 0b01100110
+> Segments to be turned on for "4" in binary / hex: 0b01100110 / 0x66
 
-> Segments to be turned on for "5" in binary / hex: 0b01101101
+> Segments to be turned on for "5" in binary / hex: 0b01101101 / 0x6D
 
-> Segments to be turned on for "6" in binary / hex: 0b01111101
+> Segments to be turned on for "6" in binary / hex: 0b01111101 / 0x7D
 
-> Segments to be turned on for "7" in binary / hex: 0b00000111
+> Segments to be turned on for "7" in binary / hex: 0b00000111 / 0x7
 
-> Segments to be turned on for "8" in binary / hex: 0b01111111
+> Segments to be turned on for "8" in binary / hex: 0b01111111 / 0x7F
 
-> Segments to be turned on for "9" in binary / hex: 0b01100111
+> Segments to be turned on for "9" in binary / hex: 0b01100111 / 0x67
 
 ## Part 1: Multiplexing LEDs
 
