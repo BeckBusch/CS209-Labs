@@ -123,9 +123,31 @@ void send_next_character_to_display(){//uint8_t digit
 	}
 }
 
-void numberDisplay(uint8_t number) {
+void numberDisplay() {
+	// variable for number 7
+	uint8_t sevenPattern = 0x7;
+	
 	PORTD |= (1 << Ds1) | (1 << Ds2) | (1 << Ds3);
 	PORTD &= ~(1 << Ds4);
 	
-	send_next_character_to_display(number);
+	// Ensure SH_CP and SH_ST are both set to logic 0
+	PORTC &= ~((1 << SH_CP) | (1 << SH_ST));
+	
+	// Send each digit to the shift reg
+	for (int i=7; i>=0; i--) {
+		// Set the SH_DS pin to be either “0” or “1” as per the bit being transferred to the shift register
+		if (sevenPattern & (1 << i)){
+			PORTC |= (1 << SH_DS);
+			} else {
+			PORTC &= ~(1 << SH_DS);
+		}
+		
+		// Toggle the SH_CP pin on (i.e., “1”) and off (i.e., “0”) to “shift in” this bit to the shift register
+		PORTC |= (1 << SH_CP);
+		PORTC &= ~(1 << SH_CP);
+		
+		// Toggle the SH_ST pin on (i.e., “1”) and off (i.e., “0”) to latch the output
+		PORTC |= (1 << SH_ST);
+		PORTC &= (1 << SH_ST);
+	}
 }
